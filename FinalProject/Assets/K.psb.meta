@@ -1,0 +1,558 @@
+fileFormatVersion: 2
+guid: e4257d1a67ea1414dbbfd382d0d7f521
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: taytrc2 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2789
+      y: 4
+      width: 684
+      height: 655
+    spriteID: cdb87a72ff4a4f74fb07c047b8d1cb7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 58, y: -1764}
+  - name: tay trc1 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3352
+      y: 1186
+      width: 513
+      height: 685
+    spriteID: 5136d26d578b6404eb4d2cdd70685d0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 923, y: -558}
+  - name: "th\xE2n Copy"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1937
+      y: 4
+      width: 844
+      height: 1174
+    spriteID: 4230c7d4e6bf9ce4a9239a9ffe630cdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -250, y: -1427}
+  - name: taysau2 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1937
+      y: 1186
+      width: 739
+      height: 529
+    spriteID: f95f7647003e12a4cb00d3642dc9f9e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 78, y: -334}
+  - name: "b\xE0n ch\xE2ntrc Copy"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2789
+      y: 667
+      width: 532
+      height: 509
+    spriteID: e451dde7651cb3e4385a91dba3f1b2f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -208, y: -53}
+  - name: tay sau1 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1986
+      width: 520
+      height: 669
+    spriteID: 1888693e359cd6c4bb8d349c50f2e232
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2273, y: 225}
+  - name: "ch\xE2ntrc2 Copy"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1036
+      y: 1986
+      width: 401
+      height: 407
+    spriteID: cf46b8c2dc6a6044ca8e20a066edda8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1755, y: 1053}
+  - name: "ch\xE2n trc Copy"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2684
+      y: 1186
+      width: 660
+      height: 556
+    spriteID: a462d47c39a1c8c49a9540fe358d4eca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 230, y: 129}
+  - name: "b\xE0n ch\xE2nsau Copy"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 532
+      y: 1986
+      width: 496
+      height: 544
+    spriteID: 2fa65ea158703fd4cbd7a5b0e9edc8f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1291, y: 1315}
+  - name: "ch\xE2nsau2 Copy"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3481
+      y: 710
+      width: 405
+      height: 413
+    spriteID: c9c8acc23b2e58645819d11643fc9fa2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1454, y: -253}
+  - name: chansau1 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3481
+      y: 4
+      width: 535
+      height: 698
+    spriteID: 2058e12fcdbfcfe4e93ef185cc2740d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1323, y: -1053}
+  - name: head Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1925
+      height: 1974
+    spriteID: 90330f81e9b4642469b1da30fd6d3ba4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1646, y: -2437}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 1
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: K Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: fb575b6de1973af4e826deef86373524
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: taytrc2 Copy
+    spriteName: taytrc2 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cdb87a72ff4a4f74fb07c047b8d1cb7d
+    layerID: 15
+    mosaicPosition: {x: 2789, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tay trc1 Copy
+    spriteName: tay trc1 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5136d26d578b6404eb4d2cdd70685d0f
+    layerID: 14
+    mosaicPosition: {x: 3352, y: 1186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "th\xE2n Copy"
+    spriteName: "th\xE2n Copy"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4230c7d4e6bf9ce4a9239a9ffe630cdb
+    layerID: 13
+    mosaicPosition: {x: 1937, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: taysau2 Copy
+    spriteName: taysau2 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f95f7647003e12a4cb00d3642dc9f9e6
+    layerID: 12
+    mosaicPosition: {x: 1937, y: 1186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "b\xE0n ch\xE2ntrc Copy"
+    spriteName: "b\xE0n ch\xE2ntrc Copy"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e451dde7651cb3e4385a91dba3f1b2f6
+    layerID: 11
+    mosaicPosition: {x: 2789, y: 667}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: tay sau1 Copy
+    spriteName: tay sau1 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1888693e359cd6c4bb8d349c50f2e232
+    layerID: 10
+    mosaicPosition: {x: 4, y: 1986}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "ch\xE2ntrc2 Copy"
+    spriteName: "ch\xE2ntrc2 Copy"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cf46b8c2dc6a6044ca8e20a066edda8c
+    layerID: 9
+    mosaicPosition: {x: 1036, y: 1986}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "ch\xE2n trc Copy"
+    spriteName: "ch\xE2n trc Copy"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a462d47c39a1c8c49a9540fe358d4eca
+    layerID: 8
+    mosaicPosition: {x: 2684, y: 1186}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "b\xE0n ch\xE2nsau Copy"
+    spriteName: "b\xE0n ch\xE2nsau Copy"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2fa65ea158703fd4cbd7a5b0e9edc8f4
+    layerID: 7
+    mosaicPosition: {x: 532, y: 1986}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "ch\xE2nsau2 Copy"
+    spriteName: "ch\xE2nsau2 Copy"
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c9c8acc23b2e58645819d11643fc9fa2
+    layerID: 6
+    mosaicPosition: {x: 3481, y: 710}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: chansau1 Copy
+    spriteName: chansau1 Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2058e12fcdbfcfe4e93ef185cc2740d0
+    layerID: 5
+    mosaicPosition: {x: 3481, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: head Copy
+    spriteName: head Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 90330f81e9b4642469b1da30fd6d3ba4
+    layerID: 4
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
