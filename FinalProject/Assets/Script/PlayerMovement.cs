@@ -7,9 +7,14 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Animator anime;
     private Collider collider;
+
     private float directX = 0f;
     private float directY = 0f;
     private float speed = 2f;
+
+    public bool checkrun;
+    public bool checkjump;
+    public bool checkcrawl;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,45 +25,61 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         directX = Input.GetAxisRaw("Horizontal");
         directY = Input.GetAxisRaw("Vertical");
-        if (directX < 0f)
+        rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
+        Flip(directX,checkrun);
+        localrotation = transform.localRotation.y;
+        if(directY < 0f)
         {
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
-            anime.SetBool("Running", true);
-  
+            transform.rotation = Quaternion.Euler(0f, transform.localRotation.y, 90f);
+            checkjump = !checkjump;
+            
         }
-        else if(directX > 0f)
+        else if (directY > 0f) {
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, directX * speed);
+            checkcrawl = !checkcrawl;
+        }
+        else
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
-            anime.SetBool("Running", true);
+            checkjump = !checkjump;
         }
-        else{
-            anime.SetBool("Running", false);
-        }
-        VerticalChange(directY);
+        charAction(checkjump, checkcrawl);
+
+
 
 
     }
-    void VerticalChange(float directY){
-        if (directY < 0f)
+    void Flip(float directX, bool checkrun){
+        if (directX < 0f)
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, -90f);
-            anime.SetBool("Crawling", true);
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            anime.SetBool("Running", checkrun);
+
         }
-        else if(directY > 0f)
+        else if (directX > 0f)
         {
-            rigidbody.velocity = new Vector2(0, 7);
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            anime.SetBool("Jumping", true);
-            anime.SetBool("Crawling", false);
+            anime.SetBool("Running", checkrun);
         }
-        else{
-            anime.SetBool("Jumping", false);
-            anime.SetBool("Crawling", false);
+        else
+        {
+            anime.SetBool("Running", !checkrun);
+        }
+    }
+    void charAction(bool checkjump, bool checkcrawl, bool checkrun)
+    {
+        if (checkjump)
+        {
+            anime.SetBool("Jumping", checkjump);
+            anime.SetBool("Crawling", checkcrawl);
+
+        }
+        else if (checkcrawl)
+        {
+            anime.SetBool("Crawling", checkcrawl);
+            anime.SetBool("Jumping", checkjump);
         }
     }
 
