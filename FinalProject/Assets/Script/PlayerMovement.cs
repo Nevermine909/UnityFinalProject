@@ -10,11 +10,11 @@ public class PlayerMovement : MonoBehaviour
 
     private float directX = 0f;
     private float directY = 0f;
-    private float speed = 2f;
-
-    public bool checkrun;
-    public bool checkjump;
-    public bool checkcrawl;
+    private float speed = 5f;
+ 
+    public bool checkrun = false;
+    public bool checkjump = false;
+    public bool checkcrawl = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,24 +28,26 @@ public class PlayerMovement : MonoBehaviour
     {   
         directX = Input.GetAxisRaw("Horizontal");
         directY = Input.GetAxisRaw("Vertical");
-        rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
-        Flip(directX,checkrun);
-        localrotation = transform.localRotation.y;
+        Flip(directX, checkrun);
+        Quaternion localrotation = Quaternion.Euler(0f,transform.localRotation.y,0f);
         if(directY < 0f)
         {
-            transform.rotation = Quaternion.Euler(0f, transform.localRotation.y, 90f);
-            checkjump = !checkjump;
-            
+            transform.rotation = Quaternion.Euler(0f, transform.localRotation.y, -90f);
+            checkcrawl = !checkcrawl;
+            charAction(checkjump, checkcrawl);
+
+
         }
         else if (directY > 0f) {
             rigidbody.velocity = new Vector2(rigidbody.velocity.x, directX * speed);
-            checkcrawl = !checkcrawl;
+            checkjump = !checkjump;
+            charAction(checkjump, checkcrawl);
         }
         else
         {
-            checkjump = !checkjump;
+            charAction(checkjump, checkcrawl);
         }
-        charAction(checkjump, checkcrawl);
+        Debug.Log(checkjump);
 
 
 
@@ -54,33 +56,26 @@ public class PlayerMovement : MonoBehaviour
     void Flip(float directX, bool checkrun){
         if (directX < 0f)
         {
+            rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            anime.SetBool("Running", checkrun);
+            anime.SetBool("Running", !checkrun);
 
         }
         else if (directX > 0f)
         {
+            rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            anime.SetBool("Running", checkrun);
+            anime.SetBool("Running", !checkrun);
         }
         else
         {
-            anime.SetBool("Running", !checkrun);
+            anime.SetBool("Running", checkrun);
         }
     }
-    void charAction(bool checkjump, bool checkcrawl, bool checkrun)
+    void charAction(bool checkjump, bool checkcrawl)
     {
-        if (checkjump)
-        {
-            anime.SetBool("Jumping", checkjump);
-            anime.SetBool("Crawling", checkcrawl);
-
-        }
-        else if (checkcrawl)
-        {
-            anime.SetBool("Crawling", checkcrawl);
-            anime.SetBool("Jumping", checkjump);
-        }
+        anime.SetBool("Crawling", checkcrawl);
+        anime.SetBool("Jumping", checkjump);
     }
 
 }
