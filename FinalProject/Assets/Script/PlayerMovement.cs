@@ -5,21 +5,21 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {   
     private Rigidbody2D rigidbody;
-    private Animator anime;
+    private Animator animate;
     private Collider collider;
 
     private float directX = 0f;
-    private float directY = 0f;
     private float speed = 5f;
  
     public bool checkrun = false;
     public bool checkjump = false;
     public bool checkcrawl = false;
+    public bool ongroundcheck;
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        anime = GetComponent<Animator>();
+        animate = GetComponent<Animator>();
         collider = GetComponent<Collider>();
     }
 
@@ -27,55 +27,51 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {   
         directX = Input.GetAxisRaw("Horizontal");
-        directY = Input.GetAxisRaw("Vertical");
+
         Flip(directX, checkrun);
-        Quaternion localrotation = Quaternion.Euler(0f,transform.localRotation.y,0f);
-        if(directY < 0f)
-        {
-            transform.rotation = Quaternion.Euler(0f, transform.localRotation.y, -90f);
-            checkcrawl = !checkcrawl;
-            charAction(checkjump, checkcrawl);
-
-
+        if (Input.GetKeyDown("space") && ongroundcheck) {
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, 7 );
+            charAction(!checkjump);
+            ongroundcheck = false;
         }
-        else if (directY > 0f) {
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, directX * speed);
-            checkjump = !checkjump;
-            charAction(checkjump, checkcrawl);
-        }
-        else
-        {
-            charAction(checkjump, checkcrawl);
-        }
-        Debug.Log(checkjump);
 
 
-
+    
 
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("ground"))
+        {
+            ongroundcheck = true;
+            charAction(checkjump);
+            Debug.Log(ongroundcheck);
+        }
+    }
+
     void Flip(float directX, bool checkrun){
         if (directX < 0f)
         {
             rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            anime.SetBool("Running", !checkrun);
+            transform.rotation = Quaternion.Euler(0f, -180f, transform.localRotation.z * -90f);
+            Debug.Log(transform.rotation);
+            animate.SetBool("Running", !checkrun);
 
         }
         else if (directX > 0f)
         {
             rigidbody.velocity = new Vector2(directX * speed, rigidbody.velocity.y);
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            anime.SetBool("Running", !checkrun);
+            transform.rotation = Quaternion.Euler(0f, 0f, transform.localRotation.z * -90f);
+            animate.SetBool("Running", !checkrun);
         }
         else
         {
-            anime.SetBool("Running", checkrun);
+            animate.SetBool("Running", checkrun);
         }
     }
-    void charAction(bool checkjump, bool checkcrawl)
+    void charAction(bool checkjump)
     {
-        anime.SetBool("Crawling", checkcrawl);
-        anime.SetBool("Jumping", checkjump);
+        animate.SetBool("Jumping", checkjump);
     }
 
 }
