@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 61366099}
   - component: {fileID: 61366098}
   - component: {fileID: 61366102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -14750,6 +14750,10 @@ MonoBehaviour:
   checkRun: 0
   checkJump: 0
   onGroundCheck: 0
+  buttonPressed: 0
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1867447170
 GameObject:
   m_ObjectHideFlags: 0

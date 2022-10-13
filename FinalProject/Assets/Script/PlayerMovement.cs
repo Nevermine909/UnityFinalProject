@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {   
     private Rigidbody2D rigidBody;
     private Animator animate;
-    private Collider collider;
+    private BoxCollider2D coll;
 
     private float directX = 0f;
     private float speed = 5f;
@@ -18,12 +18,15 @@ public class PlayerMovement : MonoBehaviour
     public bool checkRun = false;
     public bool checkJump = false;
     public bool onGroundCheck;
+
+    [SerializeField] private LayerMask jumpableGround;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animate = GetComponent<Animator>();
-        collider = GetComponent<Collider>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -36,22 +39,34 @@ public class PlayerMovement : MonoBehaviour
             charAction(!checkJump);
             onGroundCheck = false;
         }*/
-        if (Input.GetKeyDown("space") && onGroundCheck)
+        
+        if (Input.GetKey("space") && IsGrounded())
         {
-            rigidBody.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpAmount);
+        }
+        else
+        {
+            if (rigidBody.velocity.y >= 0)
+            {
+                rigidBody.gravityScale = gravityScale;
+            }
+            else if (rigidBody.velocity.y < 0)
+            {
+                rigidBody.gravityScale = fallingGravityScale;
+            }
+        }
+        if (!IsGrounded())
+        {
             charAction(!checkJump);
-            onGroundCheck = false;
         }
-        if (rigidBody.velocity.y >= 0)
+        else
         {
-            rigidBody.gravityScale = gravityScale;
+            charAction(checkJump);
         }
-        else if (rigidBody.velocity.y < 0)
-        {
-            rigidBody.gravityScale = fallingGravityScale;
-        }
+        
+
     }
-    void OnCollisionEnter2D(Collision2D other)
+    /*void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("ground"))
         {
@@ -59,6 +74,11 @@ public class PlayerMovement : MonoBehaviour
             charAction(checkJump);
             Debug.Log(onGroundCheck);
         }
+    }*/
+
+    private bool IsGrounded()
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
     void Flip(float directX, bool checkrun){
@@ -84,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
     void charAction(bool checkjump)
     {
         animate.SetBool("Jumping", checkjump);
+        Debug.Log(checkjump);
     }
 
 }
