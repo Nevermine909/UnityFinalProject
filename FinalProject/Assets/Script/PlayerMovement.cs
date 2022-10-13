@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float directX = 0f;
     private float speed = 5f;
-    private float jumpAmount = 20f;
+    private float jumpAmount = 12f;
 
     public float gravityScale = 1;
     public float fallingGravityScale = 3;

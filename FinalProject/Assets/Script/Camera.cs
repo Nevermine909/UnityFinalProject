@@ -21,7 +21,7 @@ public float smoothing = 5f;
 
         // Smoothly interpolate between the camera ’s
         // current position and it ’s target position .
-        transform.position = new Vector3(target.position.x + 3, target.position.y + 4, transform.position.z);
+        transform.position = new Vector3(target.position.x + 3, target.position.y+4, transform.position.z);
 
     }
 }
