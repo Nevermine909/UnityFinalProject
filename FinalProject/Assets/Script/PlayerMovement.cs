@@ -10,7 +10,11 @@ public class PlayerMovement : MonoBehaviour
 
     private float directX = 0f;
     private float speed = 5f;
- 
+    private float jumpAmount = 20f;
+
+    public float gravityScale = 1;
+    public float fallingGravityScale = 3;
+
     public bool checkRun = false;
     public bool checkJump = false;
     public bool onGroundCheck;
@@ -27,23 +31,25 @@ public class PlayerMovement : MonoBehaviour
     {   
         directX = Input.GetAxisRaw("Horizontal");
         Flip(directX, checkRun);
-        if (Input.GetKeyDown("space") && onGroundCheck) {
+        /*if (Input.GetKeyDown("space") && onGroundCheck) {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, 7);
             charAction(!checkJump);
             onGroundCheck = false;
-        }
-        /*else
-        if (Input.GetKeyUp("space") && !onGroundCheck)
-        {
-            onGroundCheck = true;
-        }
-        else
-        if (Input.GetKeyDown("space") && !onGroundCheck)
-        {
-            Debug.Log("can not jump");
-            charAction(!checkJump);
-            onGroundCheck = false   ;
         }*/
+        if (Input.GetKeyDown("space") && onGroundCheck)
+        {
+            rigidBody.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            charAction(!checkJump);
+            onGroundCheck = false;
+        }
+        if (rigidBody.velocity.y >= 0)
+        {
+            rigidBody.gravityScale = gravityScale;
+        }
+        else if (rigidBody.velocity.y < 0)
+        {
+            rigidBody.gravityScale = fallingGravityScale;
+        }
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -60,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(directX * speed, rigidBody.velocity.y);
             transform.localScale = new Vector3(-0.070115909f, 0.0701159164f, 0.0701159164f);
-            /*transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);*/
             animate.SetBool("Running", !checkrun);
 
         }
@@ -68,12 +73,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(directX * speed, rigidBody.velocity.y);
             transform.localScale = new Vector3(0.070115909f, 0.0701159164f, 0.0701159164f);
-            /*transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);*/
             animate.SetBool("Running", !checkrun);
         }
         else
         {
-            /*rb.velocity = new Vector2(0, rb.velocity.y);*/
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
             animate.SetBool("Running", checkrun);
         }
