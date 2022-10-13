@@ -15374,7 +15374,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 2.7563791
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_BodyType
@@ -15382,7 +15382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_LinearDrag
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_Interpolate
@@ -15390,11 +15390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_UseAutoMass
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_GravityScale
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_SleepingMode
@@ -15402,7 +15402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 612349802, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_UseFullKinematicContacts
@@ -15734,7 +15734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4908570598506403547, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.07011592
+      value: 0.07011591
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908570598506403547, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.07011591
       objectReference: {fileID: 0}
     - target: {fileID: 4908570598506403547, guid: 0075377d1fdce8549b7e39a84343144a, type: 3}
       propertyPath: m_LocalPosition.x

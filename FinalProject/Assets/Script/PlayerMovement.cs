@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider collider;
 
     private float directX = 0f;
-    private float speed = 10f;
+    private float speed = 5f;
  
     public bool checkRun = false;
     public bool checkJump = false;
@@ -28,11 +28,11 @@ public class PlayerMovement : MonoBehaviour
         directX = Input.GetAxisRaw("Horizontal");
         Flip(directX, checkRun);
         if (Input.GetKeyDown("space") && onGroundCheck) {
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 50);
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 7);
             charAction(!checkJump);
             onGroundCheck = false;
         }
-        else
+        /*else
         if (Input.GetKeyUp("space") && !onGroundCheck)
         {
             onGroundCheck = true;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("can not jump");
             charAction(!checkJump);
             onGroundCheck = false   ;
-        }
+        }*/
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(directX * speed, rigidBody.velocity.y);
             transform.localScale = new Vector3(-0.070115909f, 0.0701159164f, 0.0701159164f);
+            /*transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);*/
             animate.SetBool("Running", !checkrun);
 
         }
@@ -67,10 +68,13 @@ public class PlayerMovement : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(directX * speed, rigidBody.velocity.y);
             transform.localScale = new Vector3(0.070115909f, 0.0701159164f, 0.0701159164f);
+            /*transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);*/
             animate.SetBool("Running", !checkrun);
         }
         else
         {
+            /*rb.velocity = new Vector2(0, rb.velocity.y);*/
+            rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
             animate.SetBool("Running", checkrun);
         }
     }
