@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool checkRun = false;
     public bool checkJump = false;
+    public bool checkFall = false;
     public bool onGroundCheck;
 
     [SerializeField] private LayerMask jumpableGround;
@@ -34,11 +35,6 @@ public class PlayerMovement : MonoBehaviour
     {   
         directX = Input.GetAxisRaw("Horizontal");
         Flip(directX, checkRun);
-        /*if (Input.GetKeyDown("space") && onGroundCheck) {
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 7);
-            charAction(!checkJump);
-            onGroundCheck = false;
-        }*/
         
         if (Input.GetKey("space") && IsGrounded())
         {
@@ -53,8 +49,10 @@ public class PlayerMovement : MonoBehaviour
             else if (rigidBody.velocity.y < 0)
             {
                 rigidBody.gravityScale = fallingGravityScale;
+                animate.SetBool("Falling", !checkFall);
             }
         }
+
         if (!IsGrounded())
         {
             charAction(!checkJump);
@@ -62,19 +60,9 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             charAction(checkJump);
+            animate.SetBool("Falling", checkFall);
         }
-        
-
     }
-    /*void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("ground"))
-        {
-            onGroundCheck = true;
-            charAction(checkJump);
-            Debug.Log(onGroundCheck);
-        }
-    }*/
 
     private bool IsGrounded()
     {
@@ -104,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
     void charAction(bool checkjump)
     {
         animate.SetBool("Jumping", checkjump);
-        Debug.Log(checkjump);
     }
 
 }
