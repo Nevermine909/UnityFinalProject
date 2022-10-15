@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
 
     private float directX = 0f;
-    private float speed = 5f;
+    private float speed = 6f;
     private float jumpAmount = 12f;
 
     public float gravityScale = 1;
