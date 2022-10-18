@@ -5,14 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+  - background
+  - visibleBlock
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Visible
   - Water
   - UI
   - Ground
+  - Player
   - 
   - 
   - 
@@ -36,9 +39,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - background
   m_SortingLayers:
+  - name: background
+    uniqueID: 83619669
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
