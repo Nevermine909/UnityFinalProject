@@ -1,4 +1,4 @@
-public static class FixPSDImporter
+ public static class FixPSDImporter
     {
         [UnityEditor.InitializeOnLoadMethod]
         public static void ResetPSDImporterFoldout()
