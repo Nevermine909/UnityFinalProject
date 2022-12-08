@@ -7,15 +7,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     private int sceneToContinue;
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(1);
-    }
+    public void PlayGame() => SceneManager.LoadScene(1);
 
     public void GameContinue()
     {
-        //sceneToContinue = PlayerPrefs.GetInt("SavedScene");
-        //SceneManager.LoadScene(sceneToContinue);
+        sceneToContinue = PlayerPrefs.GetInt("SavedScene");
+        SceneManager.LoadScene(sceneToContinue);
         Debug.Log(0);
     }
 
