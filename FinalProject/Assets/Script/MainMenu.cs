@@ -13,7 +13,6 @@ public class MainMenu : MonoBehaviour
     {
         sceneToContinue = PlayerPrefs.GetInt("SavedScene");
         SceneManager.LoadScene(sceneToContinue);
-        Debug.Log(0);
     }
 
     public void QuitGame()
