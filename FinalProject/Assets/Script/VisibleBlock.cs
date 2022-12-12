@@ -28,6 +28,7 @@ public class VisibleBlock : MonoBehaviour
         {
             time = 0f;
         }
+         Debug.Log(time);
 
     }
 
