@@ -90,7 +90,6 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
-    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: taytrc2 Copy
@@ -474,8 +473,7 @@ ScriptedImporter:
     - {x: 30, y: 31}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2789, y: 4}
-    spritePosition: {x: 2553, y: 1321}
+    uvTransform: {x: 236, y: -1317}
   - name: tay trc1 Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -802,8 +800,7 @@ ScriptedImporter:
     - {x: 25, y: 26}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1986}
-    spritePosition: {x: 2429, y: 1744}
+    uvTransform: {x: -2425, y: 242}
   - name: "th\xE2n Copy"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1264,8 +1261,7 @@ ScriptedImporter:
     - {x: 38, y: 39}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1937, y: 4}
-    spritePosition: {x: 2187, y: 1431}
+    uvTransform: {x: -250, y: -1427}
   - name: "b\xE0n ch\xE2ntrc Copy"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1614,8 +1610,7 @@ ScriptedImporter:
     - {x: 27, y: 28}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 525, y: 1986}
-    spritePosition: {x: 2997, y: 720}
+    uvTransform: {x: -2472, y: 1266}
   - name: "ch\xE2ntrc2 Copy"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1997,8 +1992,7 @@ ScriptedImporter:
     - {x: 30, y: 31}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2789, y: 699}
-    spritePosition: {x: 2791, y: 933}
+    uvTransform: {x: -2, y: -234}
   - name: "ch\xE2n trc Copy"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2380,8 +2374,7 @@ ScriptedImporter:
     - {x: 30, y: 31}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2480, y: 1186}
-    spritePosition: {x: 2454, y: 1057}
+    uvTransform: {x: 26, y: 129}
   - name: "b\xE0n ch\xE2nsau Copy"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2719,8 +2712,7 @@ ScriptedImporter:
     - {x: 26, y: 27}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1065, y: 1986}
-    spritePosition: {x: 1823, y: 671}
+    uvTransform: {x: -758, y: 1315}
   - name: "ch\xE2nsau2 Copy"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3091,8 +3083,7 @@ ScriptedImporter:
     - {x: 29, y: 30}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3447, y: 744}
-    spritePosition: {x: 2027, y: 963}
+    uvTransform: {x: 1420, y: -219}
   - name: chansau1 Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3485,8 +3476,7 @@ ScriptedImporter:
     - {x: 31, y: 32}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1937, y: 1186}
-    spritePosition: {x: 2158, y: 1057}
+    uvTransform: {x: -221, y: 129}
   - name: taysau2 Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3890,8 +3880,7 @@ ScriptedImporter:
     - {x: 32, y: 33}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3447, y: 4}
-    spritePosition: {x: 2446, y: 1414}
+    uvTransform: {x: 1001, y: -1410}
   - name: tay sau1 Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -4229,8 +4218,7 @@ ScriptedImporter:
     - {x: 26, y: 27}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3148, y: 1186}
-    spritePosition: {x: 2290, y: 1759}
+    uvTransform: {x: 858, y: -573}
   - name: head Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -4766,8 +4754,7 @@ ScriptedImporter:
     - {x: 44, y: 45}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 1650, y: 2441}
+    uvTransform: {x: -1646, y: -2437}
   characterData:
     bones:
     - name: bone_1
