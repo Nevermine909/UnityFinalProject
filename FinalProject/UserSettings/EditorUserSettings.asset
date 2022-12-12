@@ -14,6 +14,7 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-2:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 5a555553030c0c5a5e565f21497a0f44134f492c747a776778784566e0b1606b
       flags: 0
     RecentlyUsedSceneGuid-3:
@@ -31,6 +32,11 @@ EditorUserSettings:
       value: 52540100030c5b0b5d0d5a7643730d4410161c737b7022657e714c63e3e66268
       flags: 0
     RecentlyUsedSceneGuid-3:
+=======
+      value: 52540100030c5b0b5d0d5a7643730d4410161c737b7022657e714c63e3e66268
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+>>>>>>> parent of 2b65f11 (Merge branch 'main' of https://github.com/Nevermine909/UnityFinalProject)
       value: 050506575554590c5c0f592015210e4446161c7a7e7824617b2b1f62b3e4616b
       flags: 0
     RecentlyUsedSceneGuid-4:
@@ -41,6 +47,9 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedSceneGuid-6:
       value: 5a555553030c0c5a5e565f21497a0f44134f492c747a776778784566e0b1606b
+<<<<<<< HEAD
+>>>>>>> parent of 2b65f11 (Merge branch 'main' of https://github.com/Nevermine909/UnityFinalProject)
+=======
 >>>>>>> parent of 2b65f11 (Merge branch 'main' of https://github.com/Nevermine909/UnityFinalProject)
       flags: 0
     vcSharedLogLevel:
