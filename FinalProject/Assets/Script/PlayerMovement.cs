@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{
+{   
     private Rigidbody2D rigidBody;
     private Animator animate;
     private BoxCollider2D coll;
@@ -12,16 +12,15 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 6f;
     private float jumpAmount = 12f;
 
-    private bool checkRun = false;
-    private bool checkJump = false;
-    private bool checkFall = false;
-    public bool onGroundCheck;
-
     public float gravityScale = 1;
     public float fallingGravityScale = 3;
 
+    public bool checkRun = false;
+    public bool checkJump = false;
+    public bool checkFall = false;
+    public bool onGroundCheck;
+
     [SerializeField] private LayerMask jumpableGround;
-    [SerializeField] private AudioSource jumpSound;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +37,7 @@ public class PlayerMovement : MonoBehaviour
         Flip(directX, checkRun);
         
         if (Input.GetKey("space") && IsGrounded())
-        {   
-            jumpSound.Play();
+        {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpAmount);
         }
         else
@@ -92,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     void charAction(bool checkjump)
-    {   
+    {
         animate.SetBool("Jumping", checkjump);
     }
 
