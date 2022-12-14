@@ -1,25 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
-public class LoadingMap : MonoBehaviour
+public class SceneLoad : MonoBehaviour
 {
-    // Update is called once per frame
-    public Animator transition;
-    public float transitionTime = 1f;
     public GameObject loadingScreen;
-    public Slider sliderFill;
+    public Image sliderFill;
+    public TMP_Text progressText;
+    public TMP_Text loadingText;
 
-    public void LoadingNextMap(int sceneIndex)
+    public void LoadScene (int sceneIndex)
     {
         StartCoroutine(LoadAsynchronously(sceneIndex));
     }
 
-    IEnumerator LoadAsynchronously(int sceneIndex)
+    IEnumerator LoadAsynchronously (int sceneIndex)
     {
-        transition.SetTrigger("StartAnimation");
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         loadingScreen.SetActive(true);
@@ -28,11 +27,9 @@ public class LoadingMap : MonoBehaviour
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
-            sliderFill.value = progress;
-
+            sliderFill.fillAmount = progress;
+            progressText.text = progress * 100f + "%";
             yield return null;
         }
-
-        yield return new WaitForSeconds(transitionTime);
     }
 }

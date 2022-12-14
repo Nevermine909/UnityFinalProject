@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class DialogManager : MonoBehaviour
     public TMP_Text characterName;
     public TMP_Text lineText;
     public RectTransform dialogTransition;
+
+    public GameObject loadingScreen;
+    public Image sliderFill;
+    public TMP_Text progressText;
+    public TMP_Text loadingText;
 
 
     Line[] currentLines;
@@ -35,10 +41,9 @@ public class DialogManager : MonoBehaviour
         Character displayCharacter = currentCharacters[displayLine.characterId];
         characterName.text = displayCharacter.characterName;
         characterAvatar.sprite = displayCharacter.characterAvatar;
-
     }
 
-    public void NextLine()
+    public void NextLine(int sceneIndex)
     {
         activeLine++;
         if (activeLine < currentLines.Length)
@@ -49,9 +54,25 @@ public class DialogManager : MonoBehaviour
         {
             dialogTransition.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
+            StartCoroutine(LoadAsynchronously(sceneIndex));
         }
     }
 
+    IEnumerator LoadAsynchronously(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        loadingScreen.SetActive(true);
+
+        while (operation.isDone == false)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+
+            sliderFill.fillAmount = progress;
+            progressText.text = progress * 100f + "%";
+            yield return null;
+        }
+    }
 
     void Start()
     {
