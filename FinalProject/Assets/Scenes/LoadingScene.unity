@@ -728,7 +728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3461690327694738098, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: m_text
-      value: "M\xECnh t\u1EE9c gi\u1EADn "
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3461690327694738098, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: m_fontAsset
