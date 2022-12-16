@@ -1048,7 +1048,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146899073}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1063,6 +1063,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 303802480}
     m_Modifications:
+    - target: {fileID: 3461690327694738098, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
+      propertyPath: m_text
+      value: GG
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461690327694738098, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3461690327694738098, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461690327694738098, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 3461690328092600072, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1101,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461690328092600072, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3461690328092600072, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
@@ -1269,7 +1285,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461690328441518220, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: lines.Array.data[0].line
-      value: "Xin ch\xE0o c\xE1c b\u1EA1n m\xECnh l\xE0 K m\xFAp, rewqreqreqreqreqrerqreerewrwqeqrf"
+      value: "C-c\xE1i qu\xE1i g\xEC th\u1EBF n\xE0y!!!. C\xF3 ai \u1EDF \u0111\xE2y
+        kh\xF4ng? C-c\u1EE9u t\xF4i v\u1EDBi!!!!!!..."
       objectReference: {fileID: 0}
     - target: {fileID: 3461690328441518220, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: lines.Array.data[3].line
@@ -1477,7 +1494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4c1c392a3446d4493237a8248680d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1830813534}
   smoothing: 5
 --- !u!1 &1963654405
 GameObject:

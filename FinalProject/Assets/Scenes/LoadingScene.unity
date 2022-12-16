@@ -953,7 +953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461690328441518220, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: lines.Array.data[2].line
-      value: "Sao kh\xF4ng ai tr\u1EA3 l\u1EDDi m\xECnh v\u1EADy n\u1EE5"
+      value: "Sao kh\xF4ng ai tr\u1EA3 l\u1EDDi m\xECnh v\u1EADy???"
       objectReference: {fileID: 0}
     - target: {fileID: 3461690328441518220, guid: 15b10b0dd62eacb42ac47f30295812be, type: 3}
       propertyPath: lines.Array.data[3].line
