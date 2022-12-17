@@ -14,8 +14,13 @@ public class LoseMenu : MonoBehaviour
     {
         if (playerHealth.getPlayerHealth() == 0)
         {
+            Time.timeScale = 0f;
             LoseMenuPop();
-        }    
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     public void Back2Menu() {
@@ -32,11 +37,9 @@ public class LoseMenu : MonoBehaviour
     }
 
 
-
     public void LoseMenuPop()
     {
         loseMenu.SetActive(true);
-        Time.timeScale = 0f;
         isLosed = true;
 
     }

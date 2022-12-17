@@ -23,7 +23,6 @@ public class LoadSceneController : MonoBehaviour
         }
     }
 
-
     IEnumerator LoadAsynchronously()
     {
         if (PlayerPrefs.HasKey("NextLevel"))
