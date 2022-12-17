@@ -9,7 +9,8 @@ public class DialogManager : MonoBehaviour
 {
     public Image characterAvatar;
     public TMP_Text characterName;
-    public TMP_Text lineText;
+    //public TMP_Text lineText;
+    public Text lineText2;
     public RectTransform dialogTransition;
 
     public GameObject loadingScreen;
@@ -36,7 +37,7 @@ public class DialogManager : MonoBehaviour
     void DisplayLine()
     {
         Line displayLine = currentLines[activeLine];
-        lineText.text = displayLine.line;
+        lineText2.text = displayLine.line;
 
         Character displayCharacter = currentCharacters[displayLine.characterId];
         characterName.text = displayCharacter.characterName;

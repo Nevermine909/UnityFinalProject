@@ -16,13 +16,15 @@ public float smoothing = 5f;
 
  void LateUpdate ()
  {
- // Create a postion the camera is aiming for
- // based on the offset from the target .
+        // Create a postion the camera is aiming for
+        // based on the offset from the target .
 
         // Smoothly interpolate between the camera ’s
         // current position and it ’s target position .
-        transform.position = new Vector3(target.position.x + 3, target.position.y+4, transform.position.z);
-
+        if (target != null)
+        {
+            transform.position = new Vector3(target.position.x + 3, target.position.y + 4, transform.position.z);
+        }
     }
 }
 

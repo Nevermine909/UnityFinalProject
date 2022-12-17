@@ -11,8 +11,11 @@ public class MainMenu : MonoBehaviour
 
     public void GameContinue()
     {
-        sceneToContinue = PlayerPrefs.GetInt("SavedScene");
-        SceneManager.LoadScene(sceneToContinue);
+        if (PlayerPrefs.HasKey("LevelSaved"))
+        {
+            sceneToContinue = PlayerPrefs.GetInt("LevelSaved");
+            SceneManager.LoadScene(sceneToContinue);
+        }
     }
 
     public void QuitGame()
