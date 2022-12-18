@@ -42,5 +42,4 @@ public class LoadSceneController : MonoBehaviour
             yield return null;
         }
     }
-
 }
