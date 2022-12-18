@@ -22,20 +22,29 @@ public class LoseMenu : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-
-    public void Back2Menu() {
-        int activeScene = SceneManager.GetActiveScene().buildIndex;
-        PlayerPrefs.SetInt("LevelSaved", activeScene);
-        gameObject.SetActive(false);
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
-    }
-
+    /*
+        public void Back2Menu() {
+            int activeScene = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("LevelSaved", activeScene);
+            gameObject.SetActive(false);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(0);
+        }
+    */
     public void PlayAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    IEnumerator LoadAsynchronously(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while (operation.isDone == false)
+        {
+            yield return null;
+        }
+    }
 
     public void LoseMenuPop()
     {
