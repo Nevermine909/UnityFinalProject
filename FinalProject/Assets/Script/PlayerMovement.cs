@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float gravityScale = 1;
     public float fallingGravityScale = 3;
+    public AudioSource myFx;
 
     public bool checkRun = false;
     public bool checkJump = false;
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         animate = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
+        myFx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,13 +39,14 @@ public class PlayerMovement : MonoBehaviour
         Flip(directX, checkRun);
         
         if (Input.GetKey("space") && IsGrounded())
-        {
+        {   
+            myFx.Play();
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpAmount);
         }
         else
         {
             if (rigidBody.velocity.y >= 0)
-            {
+            {   
                 rigidBody.gravityScale = gravityScale;
             }
             else if (rigidBody.velocity.y < 0)
@@ -54,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (!IsGrounded())
-        {
+        {   
             charAction(!checkJump);
         }
         else
