@@ -9,4 +9,9 @@ public class NextScene : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+
+    public void Back2Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
